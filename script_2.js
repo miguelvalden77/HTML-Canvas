@@ -107,3 +107,20 @@ buttonDibujar.addEventListener("click", ()=>{
     })    
 
 })
+
+
+// Dibujar una imagen
+const buttonImage = document.getElementById("imagen")
+
+buttonImage.addEventListener("click", ()=>{
+    
+    let imagen = new Image() // Instancia del objeto global Image()
+    imagen.src = "https://www.universidadviu.com/sites/universidadviu.com/files/images/galaxias%20barradas%20(1).jpg" // Se coloca el src en el nuevo objeto
+
+    imagen.onload = ()=>{ // evento del objeto que espera a que se cargue
+
+        contexto.drawImage(imagen, 0, 0, 200, 200) // primer parámetro es la imagen, y los demás son el inicio y el final
+
+    }
+    
+})
